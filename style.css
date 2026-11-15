@@ -16,7 +16,6 @@
 html {
     min-height: 100%;
     background: var(--white);
-    overflow: hidden;
 }
 
 body {
@@ -364,27 +363,7 @@ h1 {
     }
 
     .visual-panel {
-        min-height: 350px;
-        border-top: 1px solid #F0F2F0;
-        border-left: 0;
-        padding: 48px 24px;
-    }
-
-    .visual-heading {
-        top: 20px;
-        right: 24px;
-        left: 24px;
-    }
-
-    .finance-illustration {
-        width: min(100%, 520px);
-        max-height: 360px;
-    }
-
-    .visual-caption {
-        right: 24px;
-        bottom: 17px;
-        font-size: 9px;
+        display: none;
     }
 }
 
@@ -405,25 +384,10 @@ h1 {
     h1 {
         font-size: 34px;
     }
+    
 
     .visual-panel {
-        min-height: 280px;
-        padding-inline: 16px;
-    }
-
-    .visual-heading {
-        right: 18px;
-        left: 18px;
-        font-size: 8px;
-        letter-spacing: 0.8px;
-    }
-
-    .visual-rule {
-        width: 18px;
-    }
-
-    .visual-caption {
-        right: 18px;
+        display: none;
     }
 }
 
