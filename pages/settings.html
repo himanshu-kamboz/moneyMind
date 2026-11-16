@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0C0E0D">
+    <meta name="description" content="Manage your MoneyMind profile and application preferences.">
+    <title>Settings · MoneyMind</title>
+    <link rel="icon" type="image/png" href="../images/MoneyMind%20Growth%20Monogram.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar" aria-label="Main navigation">
+            <a class="sidebar-brand" href="dashboard.html" aria-label="MoneyMind dashboard">
+                <img class="sidebar-logo" src="../images/MoneyMind%20Growth%20Monogram.png" alt="MoneyMind">
+            </a>
+            <p class="nav-label">Workspace</p>
+            <nav class="primary-nav" aria-label="Workspace">
+                <a class="nav-link" href="dashboard.html">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                        <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                        <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                        <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" stroke="currentColor" stroke-width="1.7"/>
+                    </svg>
+                    Dashboard
+                </a>
+                <a class="nav-link" href="transactions.html">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 7h15m0 0-3-3m3 3-3 3M20 17H5m0 0 3-3m-3 3 3 3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Transactions
+                </a>
+                <a class="nav-link" href="analytics.html">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4 19V5m0 14h16" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        <path d="m7 15 3.2-3.5 3 2 4.8-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="18" cy="7.5" r="1.4" fill="currentColor"/>
+                    </svg>
+                    Analytics
+                </a>
+                <a class="nav-link" href="settings.html" aria-current="page">
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <circle cx="12" cy="12" r="3.3" stroke="currentColor" stroke-width="1.6"/>
+                        <path d="M19.2 13.7a7.2 7.2 0 0 0 0-3.4l1.5-1.1-1.8-3.1-1.8.7a7.5 7.5 0 0 0-2.9-1.7L13.9 3h-3.8l-.3 2.1a7.5 7.5 0 0 0-2.9 1.7l-1.8-.7-1.8 3.1 1.5 1.1a7.2 7.2 0 0 0 0 3.4l-1.5 1.1 1.8 3.1 1.8-.7a7.5 7.5 0 0 0 2.9 1.7l.3 2.1h3.8l.3-2.1a7.5 7.5 0 0 0 2.9-1.7l1.8.7 1.8-3.1-1.5-1.1Z" stroke="currentColor" stroke-width="1.35" stroke-linejoin="round"/>
+                    </svg>
+                    Settings
+                </a>
+            </nav>
+            <div class="sidebar-spacer"></div>
+            <div class="sidebar-bottom">
+                <div class="profile-card">
+                    <span class="avatar" aria-hidden="true">AM</span>
+                    <span class="profile-copy">
+                        <strong>Alex Morgan</strong>
+                        <span>Personal account</span>
+                    </span>
+                    <a class="profile-exit" href="../index.html" aria-label="Sign out">
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path d="M10 5H5.5A1.5 1.5 0 0 0 4 6.5v11A1.5 1.5 0 0 0 5.5 19H10m5-4 4-3-4-3m4 3H9" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <div class="main-area">
+            <header class="topbar">
+                <div class="breadcrumb" aria-label="Breadcrumb">
+                    Workspace
+                    <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 3.5 4 4.5-4 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <strong>Settings</strong>
+                </div>
+                <div class="topbar-actions"><span class="topbar-date">Account preferences</span></div>
+            </header>
+
+            <main class="dashboard-content data-page settings-page">
+                <section class="page-heading" aria-labelledby="page-title">
+                    <div>
+                        <p class="eyebrow">Your workspace</p>
+                        <h1 id="page-title">Settings</h1>
+                        <p>Manage your profile, preferences, and data.</p>
+                    </div>
+                </section>
+
+                <p class="static-notice" role="note">Settings controls are visual previews only. Changes are not saved or applied.</p>
+
+                <div class="settings-layout">
+                    <nav class="settings-nav" aria-label="Settings sections">
+                        <a href="#profile">Profile</a>
+                        <a href="#appearance">Appearance</a>
+                        <a href="#regional">Currency &amp; region</a>
+                        <a href="#dashboard-preferences">Dashboard</a>
+                        <a href="#notifications">Notifications</a>
+                        <a href="#security">Security &amp; privacy</a>
+                        <a href="#data-management">Data management</a>
+                    </nav>
+
+                    <div class="settings-sections">
+                        <section class="panel settings-section" id="profile" aria-labelledby="profile-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="profile-title">Profile settings</h2>
+                                    <p>Personal details associated with your account.</p>
+                                </div>
+                            </header>
+                            <div class="profile-edit-layout">
+                                <div class="profile-summary">
+                                    <span class="avatar profile-avatar" aria-hidden="true">AM</span>
+                                    <div><strong>Alex Morgan</strong><span>Profile photo</span></div>
+                                    <button class="button button-secondary" type="button">Change photo</button>
+                                </div>
+                                <div class="settings-fields profile-fields">
+                                    <label class="form-field"><span>Full name</span><input type="text" value="Alex Morgan"></label>
+                                    <label class="form-field"><span>Email address</span><input type="email" value="alex.morgan@example.com"></label>
+                                    <label class="form-field"><span>Username</span><input type="text" value="alexmorgan"></label>
+                                    <div class="settings-save"><button class="button button-primary" type="button">Edit Profile</button></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="panel settings-section" id="appearance" aria-labelledby="appearance-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="appearance-title">Appearance</h2>
+                                    <p>Choose how MoneyMind looks on this device.</p>
+                                </div>
+                            </header>
+                            <fieldset class="theme-fieldset">
+                                <legend>Color mode</legend>
+                                <div class="theme-options">
+                                    <label class="theme-option">
+                                        <input type="radio" name="color-mode" checked>
+                                        <span class="theme-swatch theme-swatch-dark"><i></i><i></i><i></i></span>
+                                        <span>Dark mode</span>
+                                    </label>
+                                    <label class="theme-option">
+                                        <input type="radio" name="color-mode">
+                                        <span class="theme-swatch theme-swatch-light"><i></i><i></i><i></i></span>
+                                        <span>Light mode</span>
+                                    </label>
+                                </div>
+                            </fieldset>
+                            <div class="settings-fields appearance-fields">
+                                <label class="form-field"><span>Theme preference</span><select><option>Use selected mode</option><option>Match device settings</option></select></label>
+                                <div class="appearance-preview" aria-label="Interface appearance preview">
+                                    <div class="preview-topline"><span></span><i></i><i></i></div>
+                                    <div class="preview-content"><div class="preview-side"></div><div class="preview-main"><i></i><i></i><i></i></div></div>
+                                    <span class="preview-caption">Interface preview</span>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="panel settings-section" id="regional" aria-labelledby="regional-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="regional-title">Currency &amp; regional preferences</h2>
+                                    <p>Set the formats used to display dates and amounts.</p>
+                                </div>
+                            </header>
+                            <div class="settings-fields settings-grid">
+                                <label class="form-field"><span>Default currency</span><select><option selected>Indian Rupee (INR)</option><option>US Dollar (USD)</option><option>Euro (EUR)</option><option>British Pound (GBP)</option></select></label>
+                                <label class="form-field"><span>Currency symbol</span><input type="text" value="₹"></label>
+                                <label class="form-field"><span>Number format</span><select><option selected>1,23,456.78</option><option>123,456.78</option><option>123 456,78</option></select></label>
+                                <label class="form-field"><span>Date format</span><select><option selected>DD MMM YYYY</option><option>MM/DD/YYYY</option><option>YYYY-MM-DD</option></select></label>
+                                <label class="form-field"><span>First day of the week</span><select><option selected>Monday</option><option>Sunday</option><option>Saturday</option></select></label>
+                            </div>
+                            <div class="section-action"><button class="button button-primary" type="button">Save regional preferences</button></div>
+                        </section>
+
+                        <section class="panel settings-section" id="dashboard-preferences" aria-labelledby="dashboard-preferences-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="dashboard-preferences-title">Dashboard preferences</h2>
+                                    <p>Choose which summaries appear on your overview.</p>
+                                </div>
+                            </header>
+                            <div class="settings-fields dashboard-setting-fields">
+                                <label class="form-field"><span>Default dashboard view</span><select><option selected>Monthly overview</option><option>Recent activity</option><option>Financial analytics</option></select></label>
+                                <div class="switch-list">
+                                    <label class="switch-row"><span><strong>Financial summary</strong><small>Show balance, income, and expense totals.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
+                                    <label class="switch-row"><span><strong>Recent transactions</strong><small>Show your latest account activity.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
+                                </div>
+                                <label class="form-field chart-preference"><span>Chart display</span><select><option>Line chart</option><option>Bar chart</option><option>Area chart</option></select></label>
+                            </div>
+                        </section>
+
+                        <section class="panel settings-section" id="notifications" aria-labelledby="notifications-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="notifications-title">Notification preferences</h2>
+                                    <p>Choose which account updates you would like to receive.</p>
+                                </div>
+                            </header>
+                            <div class="switch-list">
+                                <label class="switch-row"><span><strong>Transaction notifications</strong><small>Updates when income or expenses are recorded.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
+                                <label class="switch-row"><span><strong>Monthly financial summary</strong><small>A monthly overview of account activity.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
+                                <label class="switch-row"><span><strong>Budget alerts</strong><small>Notifications when spending approaches a limit.</small></span><input class="switch-input" type="checkbox"><i class="switch-track"></i></label>
+                                <label class="switch-row"><span><strong>General notifications</strong><small>Product updates and important account notices.</small></span><input class="switch-input" type="checkbox"><i class="switch-track"></i></label>
+                            </div>
+                        </section>
+
+                        <section class="panel settings-section" id="security" aria-labelledby="security-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="security-title">Security &amp; privacy</h2>
+                                    <p>Review sign-in and personal data preferences.</p>
+                                </div>
+                            </header>
+                            <h3 class="settings-subheading">Change password</h3>
+                            <div class="settings-fields security-fields">
+                                <label class="form-field"><span>New password</span><input type="password" placeholder="Enter a new password" autocomplete="new-password"></label>
+                                <label class="form-field"><span>Confirm password</span><input type="password" placeholder="Confirm your new password" autocomplete="new-password"></label>
+                            </div>
+                            <div class="section-action"><button class="button button-secondary" type="button">Update password</button></div>
+                            <h3 class="settings-subheading privacy-heading">Privacy preferences</h3>
+                            <div class="switch-list">
+                                <label class="switch-row"><span><strong>Personalized insights</strong><small>Use account activity to tailor financial summaries.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
+                                <label class="switch-row"><span><strong>Product research</strong><small>Allow anonymized usage data to improve the experience.</small></span><input class="switch-input" type="checkbox"><i class="switch-track"></i></label>
+                            </div>
+                            <div class="security-info">
+                                <div><span>Account security</span><strong>Password protected</strong></div>
+                                <div><span>Last password update</span><strong>Not available</strong></div>
+                            </div>
+                        </section>
+
+                        <section class="panel settings-section" id="data-management" aria-labelledby="data-title">
+                            <header class="settings-section-heading">
+                                <div>
+                                    <h2 id="data-title">Data management</h2>
+                                    <p>Manage a copy of your information and account data.</p>
+                                </div>
+                            </header>
+                            <div class="data-action-row">
+                                <div><strong>Export financial data</strong><p>Prepare a copy of your records for your own use.</p></div>
+                                <button class="button button-secondary" type="button">Export data</button>
+                            </div>
+                            <div class="data-action-row">
+                                <div><strong>Import data</strong><p>Choose a supported file to prepare an import.</p></div>
+                                <button class="button button-secondary" type="button">Import data</button>
+                            </div>
+                            <div class="data-action-row destructive-row">
+                                <div><strong>Clear application data</strong><p>Remove locally stored application information.</p></div>
+                                <button class="button button-danger" type="button">Clear data</button>
+                            </div>
+                            <div class="data-action-row destructive-row">
+                                <div><strong>Delete account</strong><p>Permanently remove this account and its information.</p></div>
+                                <button class="button button-danger" type="button">Delete account</button>
+                            </div>
+
+                            <div class="confirmation-previews">
+                                <details class="confirmation-disclosure">
+                                    <summary>Preview clear data confirmation</summary>
+                                    <dialog class="settings-dialog" open aria-labelledby="clear-confirm-title">
+                                        <h3 id="clear-confirm-title">Clear application data?</h3>
+                                        <p>This preview represents a confirmation step before locally stored application data is removed.</p>
+                                        <div class="form-actions"><button class="button button-danger" type="button">Confirm clear data</button><button class="button button-quiet" type="button">Cancel</button></div>
+                                    </dialog>
+                                </details>
+                                <details class="confirmation-disclosure">
+                                    <summary>Preview delete account confirmation</summary>
+                                    <dialog class="settings-dialog" open aria-labelledby="account-delete-title">
+                                        <h3 id="account-delete-title">Delete this account?</h3>
+                                        <p>Account deletion is permanent. This visual preview does not delete or change account data.</p>
+                                        <div class="form-actions"><button class="button button-danger" type="button">Confirm account deletion</button><button class="button button-quiet" type="button">Cancel</button></div>
+                                    </dialog>
+                                </details>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+
+</html>
