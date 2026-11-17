@@ -88,8 +88,6 @@
                     </div>
                 </section>
 
-                <p class="static-notice" role="note">Settings controls are visual previews only. Changes are not saved or applied.</p>
-
                 <div class="settings-layout">
                     <nav class="settings-nav" aria-label="Settings sections">
                         <a href="#profile">Profile</a>
@@ -172,39 +170,7 @@
                             </div>
                             <div class="section-action"><button class="button button-primary" type="button">Save regional preferences</button></div>
                         </section>
-
-                        <section class="panel settings-section" id="dashboard-preferences" aria-labelledby="dashboard-preferences-title">
-                            <header class="settings-section-heading">
-                                <div>
-                                    <h2 id="dashboard-preferences-title">Dashboard preferences</h2>
-                                    <p>Choose which summaries appear on your overview.</p>
-                                </div>
-                            </header>
-                            <div class="settings-fields dashboard-setting-fields">
-                                <label class="form-field"><span>Default dashboard view</span><select><option selected>Monthly overview</option><option>Recent activity</option><option>Financial analytics</option></select></label>
-                                <div class="switch-list">
-                                    <label class="switch-row"><span><strong>Financial summary</strong><small>Show balance, income, and expense totals.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
-                                    <label class="switch-row"><span><strong>Recent transactions</strong><small>Show your latest account activity.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
-                                </div>
-                                <label class="form-field chart-preference"><span>Chart display</span><select><option>Line chart</option><option>Bar chart</option><option>Area chart</option></select></label>
-                            </div>
-                        </section>
-
-                        <section class="panel settings-section" id="notifications" aria-labelledby="notifications-title">
-                            <header class="settings-section-heading">
-                                <div>
-                                    <h2 id="notifications-title">Notification preferences</h2>
-                                    <p>Choose which account updates you would like to receive.</p>
-                                </div>
-                            </header>
-                            <div class="switch-list">
-                                <label class="switch-row"><span><strong>Transaction notifications</strong><small>Updates when income or expenses are recorded.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
-                                <label class="switch-row"><span><strong>Monthly financial summary</strong><small>A monthly overview of account activity.</small></span><input class="switch-input" type="checkbox" checked><i class="switch-track"></i></label>
-                                <label class="switch-row"><span><strong>Budget alerts</strong><small>Notifications when spending approaches a limit.</small></span><input class="switch-input" type="checkbox"><i class="switch-track"></i></label>
-                                <label class="switch-row"><span><strong>General notifications</strong><small>Product updates and important account notices.</small></span><input class="switch-input" type="checkbox"><i class="switch-track"></i></label>
-                            </div>
-                        </section>
-
+                        
                         <section class="panel settings-section" id="security" aria-labelledby="security-title">
                             <header class="settings-section-heading">
                                 <div>
@@ -277,6 +243,7 @@
             </main>
         </div>
     </div>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>
