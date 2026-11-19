@@ -13,7 +13,7 @@ const transactions = getTransactions();
 const selectedMonth = document.querySelector('#dashboard-month').value;
 
 const monthlyTransactions = transactions.filter(transaction => {
-    return transaction.date.startsWith(selectedMonth.value);
+    return transaction.date.startsWith(selectedMonth);
 })
 
 const monthlyIncome = monthlyTransactions
@@ -21,12 +21,18 @@ const monthlyIncome = monthlyTransactions
     .reduce((total, item) => total + item.amount, 0);
 
 const displayIncome = document.querySelector('#monthlyIncome');
-displayIncome.textContent = monthlyIncome;
+displayIncome.textContent = `₹ ${monthlyIncome}`;
 
 const monthlyExpense = monthlyTransactions
     .filter(item => item.type === 'expense')
     .reduce((total, item) => total + item.amount, 0);
 
-
 const displayExpense = document.querySelector('#monthlyExpense');
-displayExpense.textContent = monthlyExpense;
+displayExpense.textContent = `₹ ${monthlyExpense}`;
+
+const monthlyBalance = monthlyIncome - monthlyExpense;
+
+const displayBalance = document.querySelector('#monthlyBalance');
+
+displayBalance.textContent = `₹ ${monthlyBalance}`;
+

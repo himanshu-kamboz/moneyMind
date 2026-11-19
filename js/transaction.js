@@ -45,7 +45,7 @@ if (incomeForm) {
             description: incomeDescription
         };
 
-        addTransaction = ({
+        addTransaction ({
             ...income,
             type: 'income'
         })
