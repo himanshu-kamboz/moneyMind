@@ -1,17 +1,8 @@
-
-export function getTransactions() {
-    return JSON.parse(localStorage.getItem('transactions')) || [];
-}
-
-function saveTransactions(transactions) {
-    localStorage.setItem('transactions', JSON.stringify(transactions));
-}
-
-function addTransaction(transaction) {
-    const transactions = getTransactions();
-    transactions.push(transaction);
-    saveTransactions(transactions);
-}
+import {
+    getTransactions,
+    addTransaction,
+    saveTransactions
+} from "./services/transactionService.js";
 
 const transactions = getTransactions();
 
@@ -45,7 +36,7 @@ if (incomeForm) {
             description: incomeDescription
         };
 
-        addTransaction ({
+        addTransaction({
             ...income,
             type: 'income'
         })
@@ -91,4 +82,45 @@ if (expenseForm) {
         })
         console.log('expense saved');
     });
+}
+
+const tableBody = document.querySelector('#transactionTableBody');
+
+tableBody.innerHTML = "";
+
+transactions.forEach(transaction => {
+
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+        <td>${transaction.date}</td>
+        <td>${transaction.title}</td>
+        <td>${transaction.category}</td>
+        <td>${transaction.type}</td>
+        <td>₹${transaction.amount}</td>
+        <td>
+            <button class="text-action">Edit</button>
+            <button class="text-action delete-action">Delete</button>
+        </td>
+    `
+    tableBody.appendChild(row);
+
+});
+
+const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
+
+if (savedProfile) {
+
+    const name = document.querySelector('#sidebarName');
+    const avatar = document.querySelector('#sidebarAvatar');
+
+    const initials = savedProfile.fullName
+        .trim()
+        .split(/\s+/)
+        .map(word => word[0])
+        .join('')
+        .toUpperCase();
+
+    if (name) name.textContent = savedProfile.fullName;
+    if (avatar) avatar.textContent = initials;
 }

@@ -1,4 +1,4 @@
-import {getTransactions } from "./transaction.js";
+import { getTransactions } from "./services/transactionService.js";
 
 const date = new Date();
 
@@ -36,3 +36,35 @@ const displayBalance = document.querySelector('#monthlyBalance');
 
 displayBalance.textContent = `₹ ${monthlyBalance}`;
 
+const tableBody = document.querySelector('#dashboardTableBody');
+
+monthlyTransactions.forEach(transaction => {
+
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td>${transaction.title}</td>
+        <td>${transaction.category}</td>
+        <td>${transaction.date}</td>
+        <td>₹${transaction.amount}</td>
+        `;
+
+    tableBody.appendChild(row);
+})
+
+const savedProfile = JSON.parse(localStorage.getItem('userProfile'));
+
+if (savedProfile) {
+
+    const name = document.querySelector('#sidebarName');
+    const avatar = document.querySelector('#sidebarAvatar');
+
+    const initials = savedProfile.fullName
+        .trim()
+        .split(/\s+/)
+        .map(word => word[0])
+        .join('')
+        .toUpperCase();
+
+    if (name) name.textContent = savedProfile.fullName;
+    if (avatar) avatar.textContent = initials;
+}

@@ -55,9 +55,9 @@
             <div class="sidebar-spacer"></div>
             <div class="sidebar-bottom">
                 <div class="profile-card">
-                    <span class="avatar" aria-hidden="true">AM</span>
+                    <span class="avatar" aria-hidden="true" id="sidebarAvatar">AM</span>
                     <span class="profile-copy">
-                        <strong>Alex Morgan</strong>
+                        <strong id="sidebarName">Alex Morgan</strong>
                         <span>Personal account</span>
                     </span>
                     <a class="profile-exit" href="../index.html" aria-label="Sign out">
@@ -153,25 +153,8 @@
                                 </div>
                             </div>
                         </section>
-
-                        <section class="panel settings-section" id="regional" aria-labelledby="regional-title">
-                            <header class="settings-section-heading">
-                                <div>
-                                    <h2 id="regional-title">Currency &amp; regional preferences</h2>
-                                    <p>Set the formats used to display dates and amounts.</p>
-                                </div>
-                            </header>
-                            <div class="settings-fields settings-grid">
-                                <label class="form-field"><span>Default currency</span><select><option selected>Indian Rupee (INR)</option><option>US Dollar (USD)</option><option>Euro (EUR)</option><option>British Pound (GBP)</option></select></label>
-                                <label class="form-field"><span>Currency symbol</span><input type="text" value="₹"></label>
-                                <label class="form-field"><span>Number format</span><select><option selected>1,23,456.78</option><option>123,456.78</option><option>123 456,78</option></select></label>
-                                <label class="form-field"><span>Date format</span><select><option selected>DD MMM YYYY</option><option>MM/DD/YYYY</option><option>YYYY-MM-DD</option></select></label>
-                                <label class="form-field"><span>First day of the week</span><select><option selected>Monday</option><option>Sunday</option><option>Saturday</option></select></label>
-                            </div>
-                            <div class="section-action"><button class="button button-primary" type="button">Save regional preferences</button></div>
-                        </section>
                         
-                        <section class="panel settings-section" id="security" aria-labelledby="security-title">
+                        <!-- <section class="panel settings-section" id="security" aria-labelledby="security-title">
                             <header class="settings-section-heading">
                                 <div>
                                     <h2 id="security-title">Security &amp; privacy</h2>
@@ -193,7 +176,7 @@
                                 <div><span>Account security</span><strong>Password protected</strong></div>
                                 <div><span>Last password update</span><strong>Not available</strong></div>
                             </div>
-                        </section>
+                        </section> -->
 
                         <section class="panel settings-section" id="data-management" aria-labelledby="data-title">
                             <header class="settings-section-heading">

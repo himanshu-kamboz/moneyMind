@@ -62,9 +62,9 @@
             <div class="sidebar-spacer"></div>
             <div class="sidebar-bottom">
                 <div class="profile-card">
-                    <span class="avatar" aria-hidden="true">AM</span>
+                    <span class="avatar" aria-hidden="true" id="sidebarAvatar">AM</span>
                     <span class="profile-copy">
-                        <strong>Alex Morgan</strong>
+                        <strong id="sidebarName">Alex Morgan</strong>
                         <span>Personal account</span>
                     </span>
                     <a class="profile-exit" href="../index.html" aria-label="Sign out">
@@ -158,59 +158,8 @@
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="transaction-date">Nov 15, 2026</td>
-                                    <td><span class="transaction-merchant">Monthly salary<span>Northstar Studio · Bank
-                                                transfer</span></span></td>
-                                    <td class="transaction-category">Salary</td>
-                                    <td><span class="type-badge income-badge">Income</span></td>
-                                    <td class="transaction-amount income">+₹78,000</td>
-                                    <td>
-                                        <div class="row-actions"><button type="button"
-                                                class="text-action">Edit</button><button type="button"
-                                                class="text-action delete-action">Delete</button></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="transaction-date">Nov 14, 2026</td>
-                                    <td><span class="transaction-merchant">Grocery run<span>Green Basket Market ·
-                                                Card</span></span></td>
-                                    <td class="transaction-category">Food &amp; dining</td>
-                                    <td><span class="type-badge expense-badge">Expense</span></td>
-                                    <td class="transaction-amount">−₹2,340</td>
-                                    <td>
-                                        <div class="row-actions"><button type="button"
-                                                class="text-action">Edit</button><button type="button"
-                                                class="text-action delete-action">Delete</button></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="transaction-date">Nov 12, 2026</td>
-                                    <td><span class="transaction-merchant">Monthly rent<span>Oakwood Residences · Bank
-                                                transfer</span></span></td>
-                                    <td class="transaction-category">Housing</td>
-                                    <td><span class="type-badge expense-badge">Expense</span></td>
-                                    <td class="transaction-amount">−₹10,800</td>
-                                    <td>
-                                        <div class="row-actions"><button type="button"
-                                                class="text-action">Edit</button><button type="button"
-                                                class="text-action delete-action">Delete</button></div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="transaction-date">Nov 10, 2026</td>
-                                    <td><span class="transaction-merchant">Everyday essentials<span>Corner &amp; Co. ·
-                                                Card</span></span></td>
-                                    <td class="transaction-category">Shopping</td>
-                                    <td><span class="type-badge expense-badge">Expense</span></td>
-                                    <td class="transaction-amount">−₹1,680</td>
-                                    <td>
-                                        <div class="row-actions"><button type="button"
-                                                class="text-action">Edit</button><button type="button"
-                                                class="text-action delete-action">Delete</button></div>
-                                    </td>
-                                </tr>
+                            <tbody id="transactionTableBody">
+                                
                             </tbody>
                         </table>
                     </div>
@@ -343,15 +292,6 @@
                                 Changes</button><button class="button button-quiet" type="button">Cancel</button></div>
                     </form>
                 </section>
-
-                <dialog class="dialog-preview" open aria-labelledby="delete-dialog-title">
-                    <p class="eyebrow">Delete confirmation · preview</p>
-                    <h2 id="delete-dialog-title">Delete this transaction?</h2>
-                    <p class="dialog-transaction">Grocery run <strong>−₹2,340</strong><span>Food &amp; dining · Nov 14,
-                            2026</span></p>
-                    <div class="form-actions"><button class="button button-danger" type="button">Confirm
-                            Delete</button><button class="button button-quiet" type="button">Cancel</button></div>
-                </dialog>
             </main>
         </div>
     </div>
